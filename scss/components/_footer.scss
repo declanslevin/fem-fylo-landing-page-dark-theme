@@ -1,0 +1,148 @@
+.footer {
+
+    .container {
+        width: 85%;
+    }
+
+    background-color: $color-dark-blue-footer;
+    padding-top: 250px;
+
+    @media ( min-width: 768px ) {
+        padding-bottom: 95px;
+    }
+
+    &__logo {
+        padding-left: 10px;
+        padding-bottom: 45px;
+    }
+
+    &--content {
+        @media ( min-width: 768px ) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        @media ( min-width: 1024px ) {
+            flex-direction: row;
+        }
+
+        &--grid {
+            display: grid;
+            grid-template-columns: 25px 1fr;
+            grid-template-rows: 3fr 1fr 1fr;
+            grid-column-gap: 15px;
+            grid-row-gap: 20px;
+            padding-bottom: 90px;
+
+            @media ( min-width: 768px ) {
+                grid-template-columns: auto 250px auto 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-column-gap: 25px;
+            }
+
+            @media ( min-width: 1200px ) {
+                grid-template-columns: auto 350px auto 1fr;
+            }
+        }
+
+        &--location {
+            &__icon {
+                content: url("../../images/icon-location.svg");
+
+                @media ( min-width: 768px ) {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+            }
+
+            &__text {
+                align-self: start;
+                margin-top: -5px;
+
+                @media ( min-width: 768px ) {
+                    grid-row-start: 1;
+                    grid-row-end: 4;
+                }
+            }
+        }
+
+        &--contact {
+            &--phone {
+                &__icon {
+                    content: url("../../images/icon-phone.svg");
+
+                    @media ( min-width: 768px ) {
+                        align-self: center;
+                    }
+                }
+            }
+
+            &--email {
+                &__icon {
+                    content: url("../../images/icon-email.svg");
+
+                    @media ( min-width: 768px ) {
+                        align-self: center;
+                    }
+                }
+            }
+        }
+
+        &--links {
+            padding-bottom: 55px;
+
+            @media ( min-width: 1024px ) {
+                padding-bottom: 0;
+            }
+
+            &__item {
+
+                &:not(:last-child) {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+
+        &--social {
+            display: flex;
+            justify-content: center;
+
+            padding: 25px 0 40px;
+
+            @media ( min-width: 768px ) {
+                padding: 0;
+            }
+
+            &--wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+                border: 2px solid white;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    background-color: white;
+
+                    i {
+                        color: $color-dark-blue-footer;
+                    }
+                }
+            }
+
+            i {
+                padding: 5px;
+            }
+
+            &__instagram {
+                font-weight: 700;
+            }
+        }
+    }
+}
